@@ -1,0 +1,75 @@
+
+.ContProfilo{
+    margin-top: 40px;
+}
+
+.ProfiloInfoDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ProfiloInfoDiv > div{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 25px;
+}
+
+.ProfiloInfoDiv> div h1{
+    color: royalblue;
+}
+
+.ProfiloInfoDiv> div h3{
+    color: royalblue;
+}
+
+.ProfiloInfoDiv > :first-child{
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.Ordini{
+    margin-top: 30px;
+
+}
+
+.Ordini div{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(240, 240, 240);
+    border-radius: 25px;
+    margin-bottom: 20px;
+
+}
+
+.Ordini h2{
+    color: royalblue;
+
+}
+
+.Ordini h3{
+    color: royalblue;
+}
+
+.ContProfilo > :nth-child(3){
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.ContProfilo > :nth-child(3) button{
+    border-radius: 30px;
+    border: 2px solid royalblue;
+    background-color: transparent;
+    height: 30px;
+    width: 90px;
+    color: royalblue;
+}
+
+.ContProfilo > :nth-child(3) button:hover{
+    background-color: royalblue;
+    color: white;
+}

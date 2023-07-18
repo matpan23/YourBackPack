@@ -1,0 +1,856 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: 'DM Sans', sans-serif;*/
+    font-family: 'Rubik', sans-serif;
+}
+
+.header{
+    width: 100%;
+    background-color: white;
+    height: 65px;
+    display: flex;
+}
+
+body {
+    font-size: 14px;
+    height: 100vh;
+}
+
+
+.HeaderfirstDiv {
+	display:flex;
+    position: relative;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+
+/* CSS FOR LOGO */
+
+.homeElement{
+    position: relative;
+    width: 10%;
+    text-decoration: none;
+}
+
+.homeElement a{
+    position: relative;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.imgOptions{
+    width: 150px;
+}
+
+
+/* CLOSE CSS FOR LOGO */
+
+
+.SonFirstDiv{
+    background-color: white;
+    display: flex;
+    height: 100%;
+}
+
+.nav{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    display: flex;
+    white-space: nowrap; /* non andra a capo il testo*/
+    gap: 20px;
+}
+
+.nav li{
+    position: relative;
+    font-size: 15px;
+}
+
+.menuItem{
+    color: royalblue;
+    text-decoration: none;
+}
+
+li a:hover{
+    border-bottom: 2px solid royalblue;
+    transition: transform 0.5s;
+    padding-bottom: 2px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+
+/* CSS SEARCH PANEL */
+
+.formSearch{
+    position: relative;
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.searchpanel {
+    position: absolute;
+    border-radius: 14px;
+    background-color: #f1f1f1;
+    width: 90%;
+    height: 33px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border: none;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.searchpanel:active{
+    border: 2px solid royalblue;
+}
+
+.divForSearch{
+    position: absolute;
+    border-radius: 100px;
+    left: 10%;
+
+}
+
+.divForSearch:hover{
+    background-color: rgb(232, 232, 232);;
+}
+
+
+
+/* CLOSE CSS SEARCH PANEL */
+
+
+.cc-icon{
+    display: block;
+    width: 100px;
+    height: 60px;
+    margin-right: 120px;
+}
+
+/* CSS per bottoni log-in, carrello ecc*/
+
+.HeaderQuick{
+    /* Distanza dal margine destro degli elementi del div*/
+    position:relativ;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4%;
+}
+
+
+.forButton {
+    padding: 2px;
+    border-radius: 14px;
+    height: 33px;
+    border: 1.3px solid royalblue;
+    background: transparent;
+    color: royalblue;
+    white-space: nowrap; /* non andra a capo il testo*/
+    cursor: pointer; /* quando passo sul bottone il puntatore si trasforma in una mano*/
+    transition: .4s; /* vado a rendere piu fluida l'animazione cambiando gradualmente il backgound-color nell'hover*/
+    text-align: center; /* testo nel bottone allineato al centro */
+    text-decoration: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.forButton:hover{
+    background-color: royalblue;
+    color: #f1f1f1;
+}
+
+/* CSS Hamburgher Menu */
+
+.hamburger{
+    display: none;
+    width: 30%;
+    cursor: pointer;
+    position: relative;
+}
+
+.HambIcon{
+    height: 38px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    left: 5%;
+}
+
+.HambIcon img{
+    height: 28px;
+    width: 28px;
+}
+
+.HambIcon:hover{
+    background-color: rgb(232, 232, 232);
+}
+
+.PrefersResp{
+    display: none;
+}
+
+.openWindow{
+    background: black;
+    width: 0;
+    height: 1180px;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.mobileMenu {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: white;
+    color: white;
+    z-index: 1000; /* Assicurati che appaia sopra gli altri elementi */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: translateX(-100%); /* traslato tutto a sinistra */
+    transition: transform 0.5s; /* transizione su transform */
+    overflow-y: scroll;
+}
+
+
+
+.closeIcon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: royalblue;
+    font-size: 30px;
+}
+
+.forButton3{
+    margin-top: 10px;
+    width: 100%;
+    background-color: transparent;
+    color: royalblue;
+    border: none;
+    border-bottom: 1px solid royalblue;
+    height: 60px;
+    font-size: 18px;
+}
+
+.Arrow{
+    position: absolute;
+    right: 0;
+    color: royalblue;
+}
+
+.Arrow:hover{
+    color: cornflowerblue;
+}
+
+.HeaderQuick3{
+    position: absolute;
+    border-top: 3px solid royalblue;
+    width: 100%;
+    top: 630px;
+    height: 300px;
+}
+
+.HeaderQuick3 div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.HeaderQuick3 div a{
+    color: royalblue;
+    font-size: 13px;
+}
+
+
+/* BANNER CSS */
+
+.Slider{
+    margin-top: 0;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.figure{
+    position: relative;
+    display: flex;
+    width: 300%; /* Questa figure dovra contenere tutte le immagine ( 3 ) ognuna che dovrà occupare il 100% della larghezza del cpntenitore quindi -> 300%*/
+    animation: 45s slide infinite; /* 15s * numero di immaggini*/
+    height: 100%;
+}
+
+.slide{
+    flex: 1; /* indica che ogni slide deve occupare una parte uguale dello spazio nel contenitore flex, cioè un terzo dello spazio, perché ci sono tre slide. */
+    position: relative;
+}
+
+.figure img{
+    width: 100%;
+    height: 100%;
+}
+
+.slide-text {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    color: white;
+    font-size: 3vw;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.slide-text1{
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    position: absolute;
+    left: 6.8%;
+    top: 30%;
+    color: white;
+    font-size: 3vw;
+}
+
+.slide-text2{
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+    position: absolute;
+    left: 9%;
+    top: 40%;
+    color: white;
+    font-size: 2.7vw;
+}
+
+.slide-text3{
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 6.8%;
+    top: 30%;
+    color: white;
+    font-size: 3vw;
+}
+
+.slide-text4{
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 9%;
+    top: 40%;
+    color: white;
+    font-size: 2.7vw;
+}
+
+
+.slide-text5{
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 6.8%;
+    z-index: 2;
+    top: 70%;
+    color: white;
+    font-size: 3vw;
+}
+
+.slide-text6{
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 19%;
+    z-index: 2;
+    top: 80%;
+    color: white;
+    font-size: 3vw;
+    margin-top: 5px;
+}
+
+.Shadow:after{
+    content: "";
+    background: linear-gradient(transparent, black);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.InnerSlide{
+    position: absolute;
+    left: 12%;
+    top: 53%;
+    width: 15%;
+    height: 34px;
+
+}
+
+.InnerSlide2{
+    position: absolute;
+    left: 57%;
+    top: 78%;
+    z-index: 2;
+    width: 15%;
+    height: 37px;
+}
+
+.InnerSlide2 button:hover{
+    background-color: rgb(54, 54, 54);
+}
+
+.linkButt{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+.ScopriButt{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: white;
+    border: 2px solid white;
+    background-color: transparent;
+    border-radius: 13px;
+    transition: .4s;
+    font-size: 15px;
+}
+
+.ScopriButt:hover{
+    background-color: rgb(62, 63, 64);
+}
+
+.ScopriButtYell{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: white;
+    border: 2px solid white;
+    background-color: transparent;
+    border-radius: 13px;
+    transition: .4s;
+    font-size: 15px;
+}
+
+.ScopriButtYell:hover{
+    background-color: rgb(181, 157, 2);
+}
+
+@keyframes slide {
+    0%, 100% { left: 0; } /* allo 0% del tempo(45s) e al 100% ritorna alla left 0, cioe vedremo la prima immagine */
+    28% { left: 0; } /* per il 28% vedremo la prima immagine perche la left è a 0 */
+    33% { left: -100%; } /* all 33% del tempo (45s) , la left andrà a -100(cioe lo spazio intero di un immaggine), quindi shiftiamo l'intera immagine e vedremo la seconda slide*/
+    61% { left: -100%; } /* La seconda slide sarà visibile dal 33% del tempo fino al 61% contando il tempo fino al cambio sarà visibile fino a 65%*/
+    66% { left: -200%; } /* al 66% shifeteremo verso sinistra questa volta di 200 (Grandezza di due slide) per vedere la terza (slide)*/
+    94% { left: -200%; }
+}
+
+
+.HeaderQuick2{
+    display: none;
+}
+
+/* Top 10 Banner */
+
+.TitoloClassifica{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.TitoloClassifica p{
+    padding: 10px;
+    font-size: 40px;
+    font-weight: bold;
+    color: royalblue;
+    text-shadow: black;
+}
+
+.ButtonRank{
+    height: 70px;
+    display: flex;
+    border-radius: 30px;
+    position: absolute;
+    left: -20px;
+    top: -23px;
+}
+
+.ButtonRank button{
+    border-radius: 100px;
+    border: 2px solid royalblue;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    color: royalblue;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+}
+
+.containerTopTen{
+    height: 590px;
+    margin-top: 140px;
+    background-color: rgb(240, 240, 240);
+    overflow: auto;
+}
+
+
+.content{
+    margin: 10px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+section .card .image{
+    height: 260px;
+    width: 170px;
+    /* padding: 3px;*/
+    /* aspect-ratio: 1;*/
+    /* overflow: hidden; */
+}
+
+
+section .card .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.card{
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 20px;
+    background: #f1f1f1;
+    width: 235px;
+    height: 420px;
+    margin: 10px;
+}
+
+.card .card-Content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+}
+
+.card .nameBook{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    border-bottom: 1px solid royalblue;
+    width: 100%;
+
+}
+
+.nameBook span{
+    margin-bottom: 5px;
+}
+
+.nameBook .name{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nameBook .author{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.nameBook span{
+    color: royalblue;
+}
+
+
+.button{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.button button{
+    background: transparent;
+    border-radius: 20px;
+    font-size: 10px;
+    color: white;
+    width: 60px;
+    height: 30px;
+    border: transparent;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.button button:hover{
+    background-color: rgb( 219, 219, 219);
+}
+
+.spanBut{
+    color: royalblue;
+    height: 8px;
+}
+
+.finalInfo{
+    bottom: 0;
+    margin-top: 15%;
+    width: 100%;
+    height: 160px;
+    background-color: rgb(27, 30, 74);
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.Icone{
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 400px;
+}
+
+div p{
+    color: white;
+}
+
+.Icone div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Icone div p{
+    margin-top: 13px;
+}
+
+
+
+
+@media screen and (max-width: 1180px) {
+
+    .SonFirstDiv{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .header{
+        height: 110px;
+    }
+
+    .homeElement{
+        order: 2;
+        width: 33.33%;
+        height: 50%;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .homeElement a{
+        display: flex;
+        align-items: center;
+    }
+
+    .hamburger{
+        height: 50%;
+        order: 1;
+        width: 30%;
+        display: flex;
+        align-items: center;
+        gap: 6.2%;
+    }
+
+
+    .PrefersResp{
+        display: flex;
+        align-items: center;
+        height: 70%;
+        border-radius: 100%;
+    }
+
+    .PrefersResp:hover{
+        background-color: rgb(232, 232, 232);
+    }
+
+    .PrefersResp img {
+        width: 28px;
+        height: 28px
+    }
+
+    .cartDirect{
+        height: 10px;
+        width: 10px;
+    }
+    .HeaderQuick{
+        display: none;
+    }
+
+    .HeaderQuick2 {
+        height: 50%;
+        order: 3;
+        position: relative;
+        width:36.67%;
+        display: flex;
+        align-items: center;
+        gap: 10%;
+    }
+
+    .HeaderQuick2 > :first-child{
+        height: 40px;
+        position: absolute;
+        right: 0;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+    }
+
+    .HeaderQuick2 > :nth-child(2){
+        height: 40px;
+        position: absolute;
+        right: 50px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+    }
+
+    .HeaderQuick2 > :nth-child(2):hover{
+        background-color: rgb(232, 232, 232);
+    }
+
+    .HeaderQuick2 > :first-child:hover{
+        background-color: rgb(232, 232, 232);
+    }
+
+
+    .HeaderQuick2 img {
+        width: 28px;
+        height: 28px
+    }
+
+    .nav{
+        display: none;
+    }
+
+    .nav2{
+        position: relative;
+        top: 12%;
+    }
+
+    .menuItem2{
+        text-decoration: none;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    /* Slider Banner */
+
+    .Slider{
+        height: 360px;
+    }
+
+    .Slider, .slide img {
+        width: 100vw;
+    }
+
+    .InnerSlide{
+        width: 16%;
+        height: 30px;
+    }
+
+    .slide-text1{
+        font-size: 25px;
+        left: 8%;
+    }
+
+    .slide-text2{
+        font-size: 25px;
+        left: 10%;
+    }
+
+    .slide-text3{
+        font-size: 25px;
+        left: 4%;
+    }
+
+    .slide-text4{
+        font-size: 25px;
+        left: 6%;
+    }
+
+    .slide-text5{
+        font-size: 4vw;
+        left: 4%;
+    }
+
+    .slide-text6{
+        font-size: 4vw;
+        left: 12%;
+    }
+
+    .InnerSlide2{
+        margin-left: 40px;
+        width: 16%;
+        height: 34px;
+    }
+
+    .ScopriButtYell{
+        width: 25vw;
+        height: 6vw;
+    }
+
+    /* SearchPanel in tablet*/
+
+    .formSearch{
+        height: 50%;
+        width: 100%;
+        order: 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .searchpanel{
+        width: 75%;
+        padding-left: 8%;
+    }
+
+    .searchpanel:active{
+        border: 1px solid royalblue;
+    }
+
+    .divForSearch{
+        left: 12.7%;
+    }
+
+    .TitoloClassifica p{
+        font-size: 28px;
+    }
+
+}
+

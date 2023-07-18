@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,800;1,100;1,200;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container {
+    padding: 40px;
+    background-color: aliceblue;
+    border: 4px solid royalblue;
+    border-radius: 20px;
+    box-shadow: -5px -5px 15px rgba(255,255,255,0.1), 5px 5px 15px rgba(0,0,0,0.35), inset -5px -5px 15px rgba(255,255,255,0.1), inset 5px 5px 15px rgba(0,0,0,0.35);
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+    width: 350px;
+}
+
+.UpperContainer {
+    height: 70%;
+    background-color: rgb(240, 240, 240);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container h2 {
+    color: royalblue;
+    font-weight: 500;
+}
+
+.inputBox span{
+    color: #fff;
+}
+
+.container .form .inputBox{
+    position: relative;
+    width: 300px;
+}
+
+.container .form .inputBox input{
+    padding: 12px 10px 12px 48px;
+    width: 100%;
+    background: royalblue;
+    border: 1px solid rgba(0,0,0,0.1);
+    color: #fff;
+    font-weight: 300;
+    border-radius: 18px;
+    font-size: 1em;
+    box-shadow: -5px -5px 15px rgba(255,255,255,0.1),
+    5px 5px 15px rgba(0,0,0,0.35);
+    transition: 0.5s;
+    outline: none;
+}
+
+.container .form .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 12px 10px 12px 48px;
+    pointer-events: none;
+    font-size: 1em; /* Dimensione di default del broswer solitamente 16px*/
+    font-weight: 300;
+    transition: 0.5s;
+    color: rgba(255,255,255,0.5);
+}
+
+.container .form .inputBox input:valid ~ span,
+.container .form .inputBox input:focus ~ span{ /* questo selettore va a selezionare tutti gli elementi span che sono fratelli di input*/
+    color: #fff;
+    border: 1px solid #fff;
+    background: royalblue;
+    transform: translateX(25px) translateY(-7px); /* effettuo una traslazione sull'asse delle x e delle y di specifiche misure che mi permetteranno di spostare gli span al momento
+    del click */
+    font-size: 0.6em; /* di base em imposta la grandezza in percentuale della font-size del padre più vicino se non trova nessuna size specificata ,
+    1em equivarrà alla dimensione del font di default del browser, che solitamente è 16px. Quindi, 0.6em sarebbe il 60% di questa dimensione, ovvero 9.6px. */
+    padding: 0 8px;
+    border-radius: 5px;
+    letter-spacing: 0.1em;
+}
+
+.container .form .inputBox input:valid,
+.container .form .inputBox input:focus{ /* focus e e valid si applicando quando l'utente interagisce con l'elemento, in questo caso i bordi verranno impostati nel colore
+specificato solo quando clicco su gli elementi e quindi li "valido" , ma l'elemento submit è considerato come sempre valido quindi avra un bordo accesso costante*/
+    border: 1px solid#fff;
+}
+
+.container .form .inputBox input[type=submit]{
+    background: #ffff;
+    transition: background 0.5s ease;
+    color: royalblue;
+}
+
+.container .form .inputBox input[type=submit]:hover{
+    /* background: hsl(225, 73%,60%); /* la rendo piu chiara */
+    box-shadow: royalblue inset 0 0 3px;
+}
+
+.container .form .inputBox ion-icon{
+    position: absolute;
+    top: 15px;
+    left: 16px;
+    width: 25px;
+    padding: 2px 0;
+    color: #fff;
+    border-right: 1px solid #fff;
+}
+
+
+.returnDiv{
+    display: flex;
+    height: 40px;
+    position: absolute;
+    bottom: 9%;
+    justify-content: center;
+}
+
+.forButton2 {
+    border-radius: 17px;
+    height: 40px;
+    border: 2px solid royalblue;
+    background: transparent;
+    color: royalblue;
+    white-space: nowrap; /* non andra a cpo il testo*/
+    cursor: pointer; /* quando passo sul bottone il puntatore si trasforma in una mano*/
+    transition: .4s; /* vado a rendere piu fluida l'animazione cambiando gradualmente il backgound-color nell'hover*/
+    text-align: center; /* testo nel bottpne allineato al centro */
+    text-decoration: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    width: 120px;
+}
+
+.forButton2:hover{
+    background-color: royalblue;
+    color: #f1f1f1;
+}
+
+.noDec2{
+    text-decoration: none;
+    padding-left: 7%;
+    padding-right: 7%;
+    align-self: flex-end; /* proprietà che viene data agli elementi all'interno */
+}
+
+
+
+
+
+
+

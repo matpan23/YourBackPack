@@ -1,0 +1,146 @@
+/*CSS FOR CART*/
+
+
+
+.zainiPref{
+    display: flex;
+    flex-direction: column;
+}
+
+.zainoPref{
+    display: flex;
+    border: transparent;
+    height: 140px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 20px;
+}
+.acquista {
+    border: transparent;
+    display: flex;
+    bottom: 0px;
+    justify-content: center;
+    position: relative;
+    margin-top: 5%;
+    height: 70px;
+}
+.acquista p{
+    color: royalblue;
+}
+.ImageContainerPref{
+    border: 2px solid black;
+    width: 100px;
+    height: 100%;
+
+}
+
+.ImageContainerPref img{
+    height: 100%;
+    width: 100%;
+}
+
+.infoAndButton{
+    display: flex;
+    height: 100%;
+    width: 60%;
+
+}
+
+.TitleBookPref {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.TitleBookPref p{
+    color: royalblue;
+}
+
+.pricePref{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pricePref p{
+    color: royalblue;
+}
+
+
+.BookButtPref{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.BookButtPref button{
+    background: transparent;
+    border-radius: 20px;
+    font-size: 10px;
+    width: 60px;
+    height: 30px;
+    border: transparent;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    margin-top: 6px;
+}
+
+.BookButtPref button:hover{
+    background-color: rgb( 219, 219, 219);
+}
+
+.noLibri{
+    margin-top: 10px;
+    display: flex;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border: transparent;
+    height: 70px;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.noLibri p{
+    color: royalblue;
+}
+
+@media screen and (max-width: 1180px) {
+
+    .infoAndButton{
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+
+    }
+
+    .TitleBookPref{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .pricePref{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .BookButtPref{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+
+
+
+
+
+}
+
